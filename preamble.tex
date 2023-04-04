@@ -6,6 +6,42 @@
 \usepackage{biolinum} % included with the {Libertine}
 \renewcommand{\familydefault}{\sfdefault}
 
+%%% Define some colors to use:
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{rosewater}{HTML}{f5e0dc}
+\definecolor{flamingo}{HTML}{f2cdcd}
+\definecolor{pink}{HTML}{f5c2e7}
+\definecolor{mauve}{HTML}{cba6f7}
+\definecolor{red}{HTML}{f38ba8}
+\definecolor{maroon}{HTML}{eba0ac}
+\definecolor{peach}{HTML}{fab387}
+\definecolor{yellow}{HTML}{f9e2af}
+\definecolor{green}{HTML}{a6e3a1}
+\definecolor{teal}{HTML}{94e2d5}
+\definecolor{sky}{HTML}{89dceb}
+\definecolor{sapphire}{HTML}{74c7ec}
+\definecolor{blue}{HTML}{89b4fa}
+\definecolor{lavender}{HTML}{b4befe}
+\definecolor{text}{HTML}{cdd6f4}
+\definecolor{subtext1}{HTML}{bac2de}
+\definecolor{subtext0}{HTML}{a6adc8}
+\definecolor{overlay2}{HTML}{9399b2}
+\definecolor{overlay1}{HTML}{7f849c}
+\definecolor{overlay0}{HTML}{6c7086}
+\definecolor{surface2}{HTML}{585b70}
+\definecolor{surface1}{HTML}{45475a}
+\definecolor{surface0}{HTML}{313244}
+\definecolor{base}{HTML}{1e1e2e}
+\definecolor{mantle}{HTML}{181825}
+\definecolor{crust}{HTML}{11111b}
+
+\definecolor{Base}{HTML}{1e1e2e}
+\definecolor{Subtext1}{HTML}{bac2de}
+\definecolor{Green}{HTML}{a6e3a1}
+\definecolor{Yellow}{HTML}{f9e2af}
+\definecolor{Text}{HTML}{cdd6f4}
+
+%%% Url package
 \usepackage{url}
 % \usepackage{hyperref}
 % \hypersetup{
@@ -22,10 +58,6 @@
 \usepackage{emptypage}
 \usepackage{subcaption}
 \usepackage{multicol}
-\usepackage[usenames,dvipsnames]{xcolor}
-
-% \usepackage{cmbright}
-
 
 \usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
 \usepackage{mathrsfs}
@@ -48,34 +80,24 @@
 \newcommand\contra{\scalebox{1.1}{$\lightning$}}
 % \let\phi\varphi
 
-
-
-
-
 % correct
 \definecolor{correct}{HTML}{009900}
 \newcommand\correct[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct}{#2}}\ensuremath{\:}}
 \newcommand\green[1]{{\color{correct}{#1}}}
-
-
 
 % horizontal rule
 \newcommand\hr{
     \noindent\rule[0.5ex]{\linewidth}{0.5pt}
 }
 
-
 % hide parts
 \newcommand\hide[1]{}
-
-
 
 % si unitx
 \usepackage{siunitx}
 \sisetup{locale = FR}
 % \renewcommand\vec[1]{\mathbf{#1}}
 \newcommand\mat[1]{\mathbf{#1}}
-
 
 % tikz
 \usepackage{tikz}
@@ -84,7 +106,6 @@
 \usetikzlibrary{arrows.meta}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.13}
-
 
 \tikzset{
     force/.style={thick, {Circle[length=2pt]}-stealth, shorten <=-1pt}
@@ -95,7 +116,6 @@
 \usepackage{thmtools}
 \usepackage[framemethod=TikZ]{mdframed}
 \mdfsetup{skipabove=1em,skipbelow=0em}
-
 
 \theoremstyle{definition}
 
@@ -318,39 +338,6 @@
 
 %%% Add code sintax coloring using listing
 \usepackage{listings}
-\usepackage{xcolor}
-\definecolor{rosewater}{HTML}{f5e0dc}
-\definecolor{flamingo}{HTML}{f2cdcd}
-\definecolor{pink}{HTML}{f5c2e7}
-\definecolor{mauve}{HTML}{cba6f7}
-\definecolor{red}{HTML}{f38ba8}
-\definecolor{maroon}{HTML}{eba0ac}
-\definecolor{peach}{HTML}{fab387}
-\definecolor{yellow}{HTML}{f9e2af}
-\definecolor{green}{HTML}{a6e3a1}
-\definecolor{teal}{HTML}{94e2d5}
-\definecolor{sky}{HTML}{89dceb}
-\definecolor{sapphire}{HTML}{74c7ec}
-\definecolor{blue}{HTML}{89b4fa}
-\definecolor{lavender}{HTML}{b4befe}
-\definecolor{text}{HTML}{cdd6f4}
-\definecolor{subtext1}{HTML}{bac2de}
-\definecolor{subtext0}{HTML}{a6adc8}
-\definecolor{overlay2}{HTML}{9399b2}
-\definecolor{overlay1}{HTML}{7f849c}
-\definecolor{overlay0}{HTML}{6c7086}
-\definecolor{surface2}{HTML}{585b70}
-\definecolor{surface1}{HTML}{45475a}
-\definecolor{surface0}{HTML}{313244}
-\definecolor{base}{HTML}{1e1e2e}
-\definecolor{mantle}{HTML}{181825}
-\definecolor{crust}{HTML}{11111b}
-
-\definecolor{Base}{HTML}{1e1e2e}
-\definecolor{Subtext1}{HTML}{bac2de}
-\definecolor{Green}{HTML}{a6e3a1}
-\definecolor{Yellow}{HTML}{f9e2af}
-\definecolor{Text}{HTML}{cdd6f4}
 
 \lstdefinestyle{mystyle}{
 	backgroundcolor=\color{Base},   % Fondo del bloque
