@@ -46,12 +46,7 @@
     \end{itemize}
 \end{definition}
 
-\begin{figure}[ht]
-    \centering
-    \incfig{evenly-covered}
-    \caption{Evenly covered}
-    \label{fig:evenly-covered}
-\end{figure}
+
 
 \begin{remark}
     If $U' \subset U$, also open and $U$ is evenly covered, then also $U'$.
@@ -65,20 +60,10 @@
     Let $S^{1} = \{ z \in \C  \mid  |z| = 1\}$.
     Take $p: \R \to  S^{1}: t \mapsto  e^{2 \pi i t}$.
     Note that $\R$ is an easier space than $S^{1}$, and so will be $\pi_1$ ($1$ vs  $\Z$).
-    \begin{figure}[H]
-        \centering
-        \incfig{covering-space-example}
-        \caption{Example of a covering space}
-        \label{fig:covering-space-example}
-    \end{figure}
+
     There are also other covering spaces of $p$.
     For example, $p' : S^{1} \to  S^{1} : z \mapsto z^3$.
-    \begin{figure}[H]
-        \centering
-        \incfig{covering-space-example-2}
-        \caption{Second example of a covering space}
-        \label{fig:covering-space-example-2}
-    \end{figure}
+
     Here we have three copies for each point. We say that the covering has $3$ sheets.
     Note that this is independent of which point we take. This is always the case!
     We can show that these are the only coverings of $S^{1}$: $\R$ and  $z \mapsto  z^{n}$.
@@ -126,12 +111,6 @@ For example, $p: \R_0^{+} \to  S^{1}: t \mapsto  e^{2\pi i t}$. Consider the inv
     These are the only types of coverings of the torus. We'll prove this later on.
 \end{eg}
 
-\begin{figure}[H]
-    \centering
-    \incfig{torus-covering}
-    \caption{Covering of the torus. $B_0$ is the figure $8$ space: two connected circles.}
-    \label{fig:torus-covering}
-\end{figure}
 
 \section{Fundamental group of the circle \emph{(and more)}}
 
@@ -161,11 +140,6 @@ In this section, we'll only consider $X = [0, 1], X = [0, 1]^2$.
     Now, we divide the interval into pieces $0 = s_0 < s_1 < \ldots < s_n = 1$ such that $|s_{i+1} - s_i| \le \delta$.
     For any $i$, we have that $f([s_i, s_{i+1}]) \subset U_b$ for some $b$.
 
-    \begin{figure}[H]
-        \centering
-        \incfig{fundamental-group-of-circle-lemma}
-        \label{fig:fundamental-group-of-circle-lemma}
-    \end{figure}
 
     We now construct $\tilde f$ by induction on $[0, s_i]$
     \begin{itemize}
@@ -190,19 +164,11 @@ In this section, we'll only consider $X = [0, 1], X = [0, 1]^2$.
 \end{lemma}
 \begin{proof}
     Same as in the one dimensional case.
-    \begin{figure}[H]
-        \centering
-        \incfig{lift-of-a-path-homotopy}
-        \label{fig:lift-of-a-path-homotopy}
-    \end{figure}
+
 
     `Moreover, if $F$ is a path homotopy, then also $\tilde F$ is a path homotopy': Easy explanation in the book. Another explanation:
 
-\begin{figure}[H]
-    \centering
-    \incfig{lift-of-path-homotopy-2}
-    \label{fig:lift-of-path-homotopy-2}
-\end{figure}
+
 \begin{itemize}
     \item $F(0, t) = b_0, F(1, t) = b_1$
     \item $\tilde F (0, \cdot ) : I \to  E: t \mapsto  \tilde F(0, t)$ is a path starting at $e_0$,
