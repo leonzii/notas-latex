@@ -1,5 +1,6 @@
-\correct{correccion} {Asi es uwu}
+%\correct{correccion} {Asi es uwu}
 
+% This is for an intro
 \begin{itemize}
     \item Lineas de separacion con /hr
         \begin{itemize}
@@ -21,19 +22,12 @@
     \item No exercise classes for this course!
 \end{itemize}
 
+% Chapter 0 (usually an introduction)
 \setcounter{chapter}{-1}
 \chapter{Introduction}
 
 \section{What is algebraic topology?}
 Functor from category of topological spaces to the category of groups.
-\begin{itemize}
-    \item Category: set of spaces and morphisms.
-    \item Functor: $X \leadsto G_X$ and  $f:X\to Y \leadsto f_*: G_X \to  G_Y$ such that
-        \begin{itemize}
-            \item $(f \circ g)_* = f_* \circ g_* $
-            \item $(1_X)_* = 1_{G_X}$
-        \end{itemize}
-\end{itemize}
 
 Two systems we'll discuss:
 \begin{itemize}
@@ -47,6 +41,7 @@ Two systems we'll discuss:
     If $G_X \not\cong G_Y$, then  $X$ and  $Y$ are not homeomorphic.
     If `shadows' are different, then objects themselves are different too.
 \end{eg}
+
 \begin{explanation}
     Suppose $X$ and $Y$ are homeomorphic.
     Then $\exists f: X \to  Y$ and $g: Y \to  X$, maps (maps are always continuous in this course), such that $g  \circ f = 1_X$ and $f \circ g = 1_Y$.
