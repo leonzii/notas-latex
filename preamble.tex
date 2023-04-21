@@ -12,7 +12,7 @@
 \definecolor{flamingo}{HTML}{f2cdcd}
 \definecolor{pink}{HTML}{f5c2e7}
 \definecolor{mauve}{HTML}{cba6f7}
-\definecolor{red}{HTML}{f38ba8}
+\definecolor{red2}{HTML}{f38ba8}
 \definecolor{maroon}{HTML}{eba0ac}
 \definecolor{peach}{HTML}{fab387}
 \definecolor{yellow}{HTML}{f9e2af}
@@ -124,6 +124,7 @@
     mdframed={
         linewidth=2pt,
         rightline=false, topline=false, bottomline=false,
+        linecolor=Green, backgroundcolor=Base!5,
     }
 ]{thmgreenbox}
 
@@ -137,7 +138,7 @@
 ]{thmbluebox}
 
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{Base!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{Base!90!black}, bodyfont=\normalfont,
     mdframed={
         linewidth=2pt,
         rightline=false, topline=false, bottomline=false,
@@ -146,42 +147,42 @@
 ]{thmblueline}
 
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{pink!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{red2!90!black}, bodyfont=\normalfont,
     mdframed={
         linewidth=2pt,
         rightline=false, topline=false, bottomline=false,
-        linecolor=RawSienna, backgroundcolor=pink!5,
+        linecolor=Red, backgroundcolor=Base!5,
     }
 ]{thmredbox}
 
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{flamingo!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{red2!90!black}, bodyfont=\normalfont,
     numbered=no,
     mdframed={
         linewidth=2pt,
         rightline=false, topline=false, bottomline=false,
-        linecolor=RawSienna, backgroundcolor=flamingo!1,
+        linecolor=Blue, backgroundcolor=Base!5,
     },
     qed=\qedsymbol
 ]{thmproofbox}
 
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{Base!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{Base!90!black}, bodyfont=\normalfont,
     numbered=no,
     mdframed={
         linewidth=2pt,
         rightline=false, topline=false, bottomline=false,
-        linecolor=NavyBlue, backgroundcolor=Base!1,
+        linecolor=Blue, backgroundcolor=Base!5,
     },
 ]{thmexplanationbox}
 
 % ENGLISH 
-%\declaretheorem[style=thmgreenbox, name=Definition]{definition}
+%\declaretheorem[style=thmgreenbox, name=Definition]{deff}
 %\declaretheorem[style=thmbluebox, numbered=no, name=Example]{eg}
 %\declaretheorem[style=thmredbox, name=Proposition]{prop}
-%\declaretheorem[style=thmredbox, name=Theorem]{theorem}
+%\declaretheorem[style=thmredbox, name=Theorem]{theo}
 %\declaretheorem[style=thmredbox, name=Lemma]{lemma}
-%\declaretheorem[style=thmredbox, numbered=no, name=Corollary]{corollary}
+%\declaretheorem[style=thmredbox, numbered=no, name=Corollary]{cor}
 
 %\declaretheorem[style=thmproofbox, name=Proof]{replacementproof}
 %\renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
@@ -203,30 +204,26 @@
 %% ENGLISH END
 
 % SPANISH 
-\declaretheorem[style=thmgreenbox, name=Definición]{definition}
+\declaretheorem[style=thmgreenbox, name=Definición]{deff}
 \declaretheorem[style=thmbluebox, numbered=no, name=Ejemplo]{eg}
 \declaretheorem[style=thmredbox, name=Proposición]{prop}
-\declaretheorem[style=thmredbox, name=Teorema]{theorem}
+\declaretheorem[style=thmredbox, name=Teorema]{theo}
 \declaretheorem[style=thmredbox, name=Lema]{lemma}
-\declaretheorem[style=thmredbox, numbered=no, name=Corolario]{corollary}
+\declaretheorem[style=thmredbox, numbered=no, name=Corolario]{cor}
 
 \declaretheorem[style=thmproofbox, name=Demostración]{replacementproof}
 \renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
 
-
-\declaretheorem[style=thmexplanationbox, name=Proof]{tmpexplanation}
-\newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
-
 \declaretheorem[style=thmblueline, numbered=no, name=Comentario]{remark}
 \declaretheorem[style=thmblueline, numbered=no, name=Nota]{note}
 
-\newtheorem*{uovt}{UOVT}
-\newtheorem*{notation}{Notación}
-\newtheorem*{previouslyseen}{As previously seen}
+\newtheorem*{previouslyseen}{Como vimos anteriormente}
 \newtheorem*{problem}{Problema}
 \newtheorem*{observe}{Observación}
 \newtheorem*{property}{Propiedad}
 \newtheorem*{intuition}{Intuición}
+
+\declaretheorem[style=thmblueline, numbered=no, name=Notacion]{notation}
 %% SPANISH END
 
 \usepackage{etoolbox}
@@ -240,13 +237,13 @@
 %   \thm@preskip=\parskip \thm@postskip=0pt
 % }
 
-\newcommand{\oefening}[1]{%
-    \def\@oefening{#1}%
-    \subsection*{Oefening #1}
+\newcommand{\ejercicio}[1]{%
+    \def\@oejercicio{#1}%
+    \subsection*{Ejercicio #1}
 }
 
-\newcommand{\suboefening}[1]{%
-    \subsubsection*{Oefening \@oefening.#1}
+\newcommand{\subejercicio}[1]{%
+    \subsubsection*{Ejercicio \@oefening.#1}
 }
 
 \newcommand{\exercise}[1]{%
@@ -259,7 +256,20 @@
 }
 
 
-\usepackage{xifthen}
+% La primera definición de comando, \testdateparts, se utiliza para analizar la 
+% fecha pasada como argumento a la función \dateparts.
+
+% La segunda definición de comando, \dateparts, separa la fecha en diferentes partes
+% (día, mes, año) y la imprime en el margen del documento utilizando el comando 
+% \marginpar. En este caso, se está utilizando una fuente sans-serif y un tamaño de
+% fuente pequeño.
+
+% La nueva definición para el comando \lesson toma tres argumentos. Si el tercer 
+% argumento es vacío, se define el valor del comando \@lesson como "Lecture #1". Si
+% el tercer argumento no es vacío, se define el valor del comando \@lesson como 
+% "Lecture #1: #3". Luego se crea una nueva subsección en el documento con el valor
+% del comando \@lesson y se llama al comando \testdateparts con el segundo argumento
+% (que es la fecha) para imprimir la fecha en el margen del documento.\usepackage{xifthen}
 
 \def\testdateparts#1{\dateparts#1\relax}
 \def\dateparts#1 #2 #3 #4 #5\relax{
@@ -359,3 +369,4 @@
 
 
 \author{Edgar M}
+% This is Gilles castell preamble, just change a few things
